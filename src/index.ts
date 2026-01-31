@@ -10,7 +10,7 @@ export interface Options {
   limit?: number;
 }
 
-export default function assetsSplit(options: Options = {}): Plugin {
+export function assetsSplit(options: Options = {}): Plugin {
   const limit = options.limit ?? 1024 * 1024; // 1MB default
   let config: ResolvedConfig;
 
@@ -142,3 +142,5 @@ export default function assetsSplit(options: Options = {}): Plugin {
     }
   };
 }
+
+export default assetsSplit;
