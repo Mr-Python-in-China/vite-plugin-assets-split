@@ -1,0 +1,36 @@
+{
+  "name": "vite-plugin-assets-split",
+  "version": "1.0.0",
+  "description": "A Vite plugin to split large static assets into smaller chunks using a special import query.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "playground": "vite playground",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "assets",
+    "split",
+    "chunk",
+    "large file"
+  ],
+  "author": "Mr-Python-in-China",
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
